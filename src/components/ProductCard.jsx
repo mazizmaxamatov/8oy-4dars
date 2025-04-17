@@ -1,5 +1,4 @@
-import { useDispatch } from "react-redux";
-import { addDataToShopping } from "../redux/ShoppingSlice/index";
+
 
 import { Heart, Search, ShoppingCart } from "lucide-react";
 const api = import.meta.env.VITE_API
