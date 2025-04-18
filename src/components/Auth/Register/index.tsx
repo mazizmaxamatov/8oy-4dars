@@ -54,9 +54,9 @@ function Register({ setIsModalOpen, setIsLogged }) {
     try {
       const result = await signInWithGoogle();
       const userData = {
-        name: result.user.displayName || '', // If available from Google
+        name: result.user.displayName || '',
         email: result.user.email,
-        password: 'defaultpassword', // Or create a password handling mechanism for Google users
+        password: 'defaultpassword', 
       };
 
       const response = await axios.post(`${api}/user/sign-up/google?access_token=${token}`, userData);

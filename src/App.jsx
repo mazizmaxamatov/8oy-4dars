@@ -14,6 +14,8 @@ import { ConfigProvider, App as AntdApp } from "antd";
 import { Toaster } from "sonner";
 import Address from "./pages/Profile/ProfileComponents/Address.jsx";
 import ShoppingCart from "./pages/ShoppingCard/index.jsx";
+import Blog from "./pages/Blog/index.jsx";
+import Checkout from "./pages/Checkout/index.jsx";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
             <Route element={<Track />} path="track" />
           </Route>
           <Route element={<ShoppingCart/>} path="shoppingcart"/>
+          <Route element={<Blog/>} path="blog"/>
+          <Route element={<Checkout/>} path="checkout"/>
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

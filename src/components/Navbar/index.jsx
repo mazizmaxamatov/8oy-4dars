@@ -48,24 +48,13 @@ export default function Navbar() {
             <button
               onClick={() => navigate("/shoppingcart")}
               className="hover:text-[#46A358] transition-all"
+              
             >
               <ShoppingCart size={24} />
             </button>
           </div>
 
-          {/* {[Search, Heart, ShoppingCart].map((Icon, i) => {
-            const linkPaths = ["/search", "/favorites", "/cart"]; 
-            return (
-              <Link key={i} to={linkPaths[i]} className="hover:text-[#46A358] transition-all">
-                <Icon size={24} />
-              </Link>
-            );
-          })} */}
-          {/* {[Search, Heart, ShoppingCart].map((Icon, i) => (
-            <button key={i} className="hover:text-[#46A358] transition-all">
-              <Icon size={24} />
-            </button>
-          ))} */}
+
           {isLogged ? (
             <button onClick={() => router("/profile/account")} className="bg-[#46A358] hover:bg-[#46A358] px-6 py-1.5 text-lg rounded text-white flex items-center gap-2">
               {user?.user?.name || "User"}
@@ -91,3 +80,23 @@ export default function Navbar() {
     </nav>
   );
 }
+
+
+
+
+
+
+
+  {/* {[Search, Heart, ShoppingCart].map((Icon, i) => {
+            const linkPaths = ["/search", "/favorites", "/cart"]; 
+            return (
+              <Link key={i} to={linkPaths[i]} className="hover:text-[#46A358] transition-all">
+                <Icon size={24} />
+              </Link>
+            );
+          })} */}
+          {/* {[Search, Heart, ShoppingCart].map((Icon, i) => (
+            <button key={i} className="hover:text-[#46A358] transition-all">
+              <Icon size={24} />
+            </button>
+          ))} */}
